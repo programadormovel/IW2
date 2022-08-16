@@ -59,7 +59,7 @@ http
       form.parse(req, function (err, fields, files) {
         var oldpath = files.arquivo.filepath;
         var newpath =
-          "./backend/files/" + files.arquivo.originalFilename;
+          "./files/" + files.arquivo.originalFilename;
         fs.rename(oldpath, newpath, function (err) {
           if (err) throw err;
           res.write("Arquivo enviado para o servidor");
